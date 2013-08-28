@@ -20,8 +20,13 @@ app.get('*.css', function(req, res){
 });
 
 app.get('/proxy', function(req, res){
-	var params = url.parse(req.url, true);
-	var URL = "http://" + params.query.url;
+	var params = url.parse(req.url, true),
+		URL;
+	if (params.query.url.indexOf('http://') == -1) {
+		URL = "http://" + params.query.url;
+	} else {
+		URL = params.query.url;
+	}
 
 	var destParams = url.parse(URL);
 

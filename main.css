@@ -11,6 +11,14 @@ body {
 	line-height: 1.4;
 }
 
+a {
+	color: #f3f7fb;	
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 .hidden {
 	display: none;
 }
