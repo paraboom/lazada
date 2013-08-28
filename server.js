@@ -54,4 +54,4 @@ app.get('/proxy', function(req, res){
     innerReq.end();
 });
 
-app.listen(process.env.PORT || 1234);
+app.listen(process.env.PORT || 80);
