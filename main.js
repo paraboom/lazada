@@ -1,4 +1,7 @@
 (function(){
+	var example1 = 'www.lazada.vn/Nokia-Lumia-520-IPS4-5MP-8GB-Den-58171.html',
+		example2 = 'www.lazada.vn/Apple-iPhone-5-Retina-4-8MP-16GB-Den-44541.html';
+
 	function parseHtmlPage(url){
 		var df = $.Deferred();
 
@@ -20,9 +23,6 @@
 				result.specs[tr.find('.strong').text().replace(/\s+/g, '___')] = tr.find('td:last-child').text();
 			});
 
-
-			console.log(result);
-
 			df.resolve(result);
 		});
 
@@ -34,8 +34,17 @@
 			firstPic = $('.first-item-pic img'),
 			secondPic = $('.second-item-pic img'),
 			targetTable = $('.target'),
+			example = $('.example'),
 			targetTableTr = targetTable.find('.target-pics'),
 			template = Handlebars.compile($('#tableRow').html());
+
+		example.on('click', function(evt){
+			evt.preventDefault();
+			evt.stopPropagation();
+
+			$('#url1').val(example1);
+			$('#url2').val(example2);
+		});
 
 		formEl.on('submit', function(evt){
 			evt.preventDefault();
@@ -47,10 +56,6 @@
 				input2Val = $('#url2').val();
 
 			btn.attr('disabled', true);
-
-			//DEBUG
-			input1Val = 'www.lazada.vn/Nokia-Lumia-520-IPS4-5MP-8GB-Den-58171.html';
-			input2Val = 'www.lazada.vn/Apple-iPhone-5-Retina-4-8MP-16GB-Den-44541.html';
 
 			$.when.apply($, [parseHtmlPage(input1Val), parseHtmlPage(input2Val)]).then(function(first, second){
 				firstPic.attr('src', first.pic);
