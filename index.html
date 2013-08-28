@@ -4,11 +4,49 @@
 	<meta charset="UTF-8">
 	<title>Hello</title>
 	<link rel="stylesheet" href="main.css" />
+	<script id="tableRow" type="text/x-handlebars-template">
+		{{#each rows}}
+			<tr>
+				<th>{{label}}</th>
+				<td>{{val1}}</td>
+				<td>{{val2}}</td>
+			</tr>
+		{{/each}}
+	</script>
 </head>
 <body>
-	hahaha
-	<div class="content"></div>
+	<div class="header">
+		<div class="title cf">Test assignment</div>
+	</div>
+	<div class="container">
+		<form class="items-parser">
+			<div class="form-title">Please enter two items url from lazada.vn</div>
+			<div class="form-body cf">
+				<div class="form-row">
+					<input class="form-input" type="text" name="url1" id="url1" placeholder="Url №1" />
+				</div>
+				<div class="form-row">
+					<input class="form-input" type="text" name="url2" id="url2" placeholder="Url №2" />
+				</div>
+				<div class="form-row">
+					<input class="form-button" type="submit" value="Submit" />
+				</div>
+			</div>
+		</form>
+
+		<table class="target hidden">
+			<tbody>
+				<tr class="target-pics">
+					<th></th>
+					<th class="first-item-pic"><img src="empty.png" /></th>
+					<th class="second-item-pic"><img src="empty.png" /></th>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 	<script src="jquery-2.0.3.min.js"></script>
+	<script src="handlebars.js"></script>
+	<script src="underscore.js"></script>
 	<script src="main.js"></script>
 </body>
 </html>

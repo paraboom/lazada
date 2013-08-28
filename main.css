@@ -1,6 +1,162 @@
-body {
-	background: #000;
-	color: #fff;
+body, html {
 	padding: 0;
 	margin: 0;
+	background: #3870ab;
+	color: #f3f7fb;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.hidden {
+	display: none;
+}
+
+.cf:before,
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 50px;
+	background: #1f4873;
+	z-index: 100;
+}
+
+.title {
+	float: left;
+	box-sizing: border-box;
+	padding: 14px 15px;
+	font-size: 20px;
+	line-height: 22px;
+}
+
+.container {
+	max-width: 750px;
+	margin: 0 auto;
+	padding: 90px 15px;
+}
+
+.items-parser {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.form-title {
+	padding: 10px 15px;
+	background: #1f5373;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.form-body {
+	background: #3e87b4;
+	padding: 15px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.form-row {
+	position: relative;
+	width: 33%;
+	float: left;
+}
+
+.form-input {
+	width: 90%;
+	font-size: 16px;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	display: inline-block;
+	height: 38px;
+	line-height: 1.4;
+	padding: 6px 12px;
+	color: #555;
+	vertical-align: middle;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	box-sizing: border-box;
+}
+
+.form-input:focus {
+	border-color: #66afe9;
+	outline: 0;
+	-webkit-transition: border-color ease-in-out .15s;
+	-moz-transition: border-color ease-in-out .15s;
+	transition: border-color ease-in-out .15s;
+}
+
+.form-button {
+	background: #1f5373;
+	border: 1px solid transparent;
+	color: #f3f8fb;
+	margin: 0;
+	width: 100%;
+	padding: 7px 15px;
+	font-size: 16px;
+	line-height: 1.4;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 1px 2px rgba(24, 31, 39, 0.1);
+	-moz-box-shadow: 0px 1px 2px rgba(24, 31, 39, 0.1);
+	box-shadow: 0px 1px 2px rgba(24, 31, 39, 0.1);
+}
+
+.form-button:hover,
+.form-button:active {
+	background: #21597b;
+}
+
+.form-button[disabled] {
+	opacity: 0.65;
+	cursor: not-allowed;
+}
+
+.target {
+	width: 100%;
+	border: none;
+	background-color: #296b93;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-color: transparent;
+	border-radius: 6px;
+}
+
+.target tbody > tr:nth-child(odd) > td,
+.target tbody > tr:nth-child(odd) > th {
+	background: #22597c;
+}
+
+.target th,
+.target td {
+	position: relative;
+	width: 33%;
+	padding: 8px;
+}
+
+.target th {
+	text-align: right;
+}
+
+.target-pics th {
+	text-align: left;
+	vertical-align: bottom;
+}
+
+.target-pics img {
+	width: 100%;
+	display: inline-block;
 }

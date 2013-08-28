@@ -11,6 +11,10 @@ app.get('*.js', function(req, res){
 	res.sendfile(__dirname + req.url);
 });
 
+app.get('*.png', function(req, res){
+	res.sendfile(__dirname + req.url);
+});
+
 app.get('*.css', function(req, res){
 	res.sendfile(__dirname + req.url);
 });

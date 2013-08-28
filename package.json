@@ -1,0 +1,23 @@
+{
+  "name": "lazada",
+  "version": "0.0.0",
+  "description": "lazada ======",
+  "main": "server.js",
+  "dependencies": {
+    "express": "~3.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/paraboom/lazada.git"
+  },
+  "author": "Ivan Shornikov",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/paraboom/lazada/issues"
+  }
+}
